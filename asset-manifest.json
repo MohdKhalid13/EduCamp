@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/EduCamp/static/css/main.e24590b1.css",
+    "main.js": "/EduCamp/static/js/main.51fca2bc.js",
+    "static/js/787.2af8c885.chunk.js": "/EduCamp/static/js/787.2af8c885.chunk.js",
+    "index.html": "/EduCamp/index.html",
+    "main.e24590b1.css.map": "/EduCamp/static/css/main.e24590b1.css.map",
+    "main.51fca2bc.js.map": "/EduCamp/static/js/main.51fca2bc.js.map",
+    "787.2af8c885.chunk.js.map": "/EduCamp/static/js/787.2af8c885.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e24590b1.css",
+    "static/js/main.51fca2bc.js"
+  ]
+}

@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/EduCamp/static/css/main.52b433ff.css",
-    "main.js": "/EduCamp/static/js/main.171bc60f.js",
+    "main.css": "/EduCamp/static/css/main.8ae4232f.css",
+    "main.js": "/EduCamp/static/js/main.5cd57323.js",
     "static/js/787.2af8c885.chunk.js": "/EduCamp/static/js/787.2af8c885.chunk.js",
     "static/media/MdKhalid.jpeg": "/EduCamp/static/media/MdKhalid.11fe6f92849c187615b2.jpeg",
     "index.html": "/EduCamp/index.html",
-    "main.52b433ff.css.map": "/EduCamp/static/css/main.52b433ff.css.map",
-    "main.171bc60f.js.map": "/EduCamp/static/js/main.171bc60f.js.map",
+    "main.8ae4232f.css.map": "/EduCamp/static/css/main.8ae4232f.css.map",
+    "main.5cd57323.js.map": "/EduCamp/static/js/main.5cd57323.js.map",
     "787.2af8c885.chunk.js.map": "/EduCamp/static/js/787.2af8c885.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.52b433ff.css",
-    "static/js/main.171bc60f.js"
+    "static/css/main.8ae4232f.css",
+    "static/js/main.5cd57323.js"
   ]
 }

@@ -18,7 +18,8 @@ function App(){
   const toggleMode = ()=>{
     if(mode === 'light'){
       setMode('dark');
-      document.body.style.backgroundColor = '#042743';
+      // document.body.style.backgroundColor = '#042743';
+      document.body.style.backgroundColor = 'black';
       document.body.style.color = 'white';
       showAlert("Dark mode has been enabled", "success");
       document.title = "EduCamp:- Dark Mode Enabled"
@@ -52,7 +53,7 @@ function App(){
         <Routes>
           <Route path="/" element={<About/>}></Route>
           <Route path="/TextForm" element={<TextForm showAlert={showAlert} mode={mode} heading="Enter The Text To Analyze"/>}></Route>
-          <Route path="/Donate" element={<Donate/>}></Route>
+          <Route path="/Donate" element={<Donate showAlert={showAlert} mode={mode}  />}></Route>
         </Routes>
         <Footer mode={mode} />
     </>

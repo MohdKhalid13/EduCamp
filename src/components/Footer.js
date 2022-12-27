@@ -25,7 +25,7 @@ function Footer(props){
     </div>
   </section>
 
-  <section className="" style={{backgroundColor: props.mode === 'dark' ? '#222' : 'white', color: props.mode === 'light' ? 'black' : 'white'}}>
+  <section style={{backgroundColor: props.mode === 'dark' ? '#222' : 'white', color: props.mode === 'light' ? 'black' : 'white'}}>
     <div className="container text-center text-md-start" style={{backgroundColor: props.mode === 'dark' ? '#222' : 'white'}}>
       <div className="row">
         <div className="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4 mt-4">
@@ -73,11 +73,8 @@ function Footer(props){
 
         <div className="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4 mt-4">
           <h6 className="text-uppercase fw-bold mb-4">Contact</h6>
-          <p><i className="fas fa-home me-3"></i> Navi Mumbai, Kharghar, India</p>
-          <p>
-            <i className="fas fa-envelope me-3"></i>
-            mohdkhalid.mansoori@gmail.com
-          </p>
+          <p id="add"><i className="fas fa-home me-3"></i> Navi Mumbai, Maharashtra, India</p>
+          <p id="email"><i className="fas fa-envelope me-3"></i>mohdkhalid.mansoori@gmail.com</p>
           <p><i className="fas fa-phone me-3"></i> + 91 XXXXX XXXXX</p>
           <p><i className="fas fa-print me-3"></i> + 022 XXXX XXXX</p>
         </div>
@@ -91,6 +88,6 @@ function Footer(props){
 </footer>
         </>
     )
-}
+} 
 
 export default Footer;

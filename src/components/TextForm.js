@@ -1,6 +1,26 @@
 import React, {useState} from "react";
 
 function TextForm(props){
+    
+    const Remove = () => {
+        const sentence = text.replace(/\s+/g, ' ').trim()
+        // const sentence = text.trim();
+        setText(sentence)
+        props.showAlert("Extra Spaces is Removed","success")
+
+    }
+   
+    const capitalize = () => {
+
+      const words = text.split(" ");
+      let a = words.map((word) => { 
+          return word[0].toUpperCase() + word.substring(1); 
+      }).join(" ");
+      
+      setText(a);
+      props.showAlert("First Letter is Capitalize","success")
+
+    }
 
     const handleUpClick = () =>{
          let innertext = text.toUpperCase();
@@ -24,23 +44,6 @@ function TextForm(props){
         props.showAlert("Text Cleared","success")
 
     }
-
-    // const toggleStyle = ()=>{
-    //     if(myStyle.color === "black"){
-    //         setMystyle({
-    //             color:"white",
-    //             backgroundColor:"black"
-    //         })
-    //         setbtnText("Enable Light Mode")
-    //     }
-    //     else{
-    //         setMystyle({
-    //             color:"black",
-    //             backgroundColor:"White"
-    //         })
-    //         setbtnText("Enable Dark Mode")
-    //     }
-    // }
 
     function myFunction() {
       var copyText = document.getElementById("myBox");
@@ -68,14 +71,6 @@ function TextForm(props){
    props.showAlert("Text in Reading!","success")
     }
     
-    // const [myStyle,setMystyle] = useState({
-    //     color:"black",
-    //     backgroundColor:"white"
-    // })
-
-    // const [btntext,setbtnText] = useState("Enable Dark Mode")
-
-
     const [text,setText] = useState("") 
 
     return(
@@ -85,23 +80,23 @@ function TextForm(props){
             <div className="container">
             <div className="form-group mb-3">
                <textarea className="form-control" value={text} onChange={handleOnchange} id="myBox" style={{backgroundColor: props.mode === 
-                'dark' ? 'grey' : 'white', color: props.mode === 'light' ? 'black' : 'white'}} rows="5"></textarea>
+                'dark' ? 'white' : 'black', color: props.mode === 'light' ? 'white' : 'black'}} rows="3"></textarea>
             </div>
+               <button type="button" onClick={Remove} className="btn btn-outline-primary mt-1 mx-1">Remove Spaces</button>
+               <button type="button" onClick={capitalize} className="btn btn-outline-primary mt-1 mx-1">Convert First Letter Uppercase</button>
                <button type="button" onClick={handleUpClick} className="btn btn-outline-primary mt-1 mx-1">Convert to Uppercase</button>
                <button type="button" onClick={handleLowClick} className="btn btn-outline-primary mt-1 mx-1">Convert to LowerCase</button>
                <button type="button" onClick={ClearText} className="btn btn-outline-primary mt-1 mx-1">ClearText</button>
                <button type="button" onClick={myFunction} className="btn btn-outline-primary mt-1 mx-1">Copy Text</button>
                <button type="button" id="read" onClick={Read} className="btn btn-outline-primary mt-1 mx-1">Read Text</button>
 
-            <div className="container my-3 mt-5" style={{color: props.mode === 'light'? 'black' : 'white'}}>
+            <div id="textform" className="container my-3 mt-5" style={{color: props.mode === 'light'? 'black' : 'white'}}>
                <h3>Your Text Summary</h3>
                <p>{text.split(" ").length} words and {text.length} characters</p>
                <p>{0.008 * text.split(" ").length} Minutes Required to Read.</p>
                <h2>Preview</h2>
                <p>{text.length>0 ? text : " Enter The Text To Preview "}</p>
-            </div> 
-               {/* <button type="button" onClick={toggleStyle} className="btn btn-dark my-5">{btntext}</button> */}
-               
+            </div>                
             </div>
           </div>
 

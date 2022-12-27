@@ -17,3 +17,11 @@ props.alert && <div className="alert alert-success alert-dismissible fade show" 
 }
 
 export default Alert;
+
+
+function capitalizeFirstLetter(string) {
+  return string.charAt(0).toUpperCase() + string.slice(1);
+}
+
+console.log(capitalizeFirstLetter('foo')); // F
+
